@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import "../styles/App.css";
+import Login from "../component/Login/login";
 
 class App extends Component {
   render() {
-    return <h1>POLL APP</h1>;
+    return (
+      <div>
+        <Login />
+      </div>
+    );
   }
 }
 
