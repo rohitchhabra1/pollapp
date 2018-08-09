@@ -20,7 +20,7 @@ class Signup extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-
+    
   };
   render() {
     return (
@@ -66,7 +66,7 @@ class Signup extends React.Component {
             <select
               className="form-control"
               id="options"
-              value={this.state.role}
+              value={this.state.options}
               onChange={this.onChange}
             >
               <option value="user">User</option>
