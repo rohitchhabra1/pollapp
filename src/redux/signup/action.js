@@ -1,6 +1,6 @@
 import axiosCall from "../../services/axiosCall";
 import { call, put } from "redux-saga/effects";
-import * as actions from "./Actions";
+import * as actions from "../actions";
 
 function* signupRequest(action) {
   try {
@@ -16,7 +16,7 @@ function* signupRequest(action) {
       yield put(actions.userSignUpError("error"));
     }
   } catch (error) {
-    yield put(actions.errorAddTodo("error"));
+    yield put(actions.userSignUpError("error"));
   }
 }
 
