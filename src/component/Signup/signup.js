@@ -8,19 +8,21 @@ class Signup extends React.Component {
       name: "",
       email: "",
       password: "",
-      options: "user",
-      valid: false
+      role: "user"
     };
+    this.valid = false;
   }
   onChange = e => {
-    this.setState({ [e.target.id]: e.target.value });
     if (!e.target.value) {
-      this.setState({ valid: true });
+      this.valid = true;
     }
+    this.setState({ [e.target.id]: e.target.value });
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.userSignupRequest();
+    console.log(this.state);
+    
+    this.props.userSignupRequest(this.state);
   };
   render() {
     return (
@@ -66,7 +68,7 @@ class Signup extends React.Component {
             <select
               className="form-control"
               id="options"
-              value={this.state.options}
+              value={this.state.role}
               onChange={this.onChange}
             >
               <option value="user">User</option>

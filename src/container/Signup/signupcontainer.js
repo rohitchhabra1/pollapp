@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
 import Signup from "../../component/Signup/signup";
-import userSignUpRequest from "../../redux/actions";
+import { userSignUpRequest } from "../../redux/actions";
 
-mapStateToProps = state => {};
+const mapStateToProps = state => ({});
 
-mapDispatchToProps = dispatch => ({
-  userSignUpRequest: data => dispatch(userSignUpRequest(data))
+const mapDispatchToProps = dispatch => ({
+  userSignupRequest: data => dispatch(userSignUpRequest(data))
 });
 
-export default connect({
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-})(Signup);
+)(Signup);

@@ -1,6 +1,6 @@
-import { update } from "immutability-helper";
+import update from "immutability-helper";
 import { handleActions } from "redux-actions";
-import * as constants from "../constants";
+import constants from "../constants";
 
 const defaultState = {
   userSignUp: {
