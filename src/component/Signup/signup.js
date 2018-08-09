@@ -20,7 +20,7 @@ class Signup extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    
+    this.props.userSignupRequest();
   };
   render() {
     return (
